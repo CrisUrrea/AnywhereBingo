@@ -1,0 +1,113 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    background-color: #ffffff;
+    color: #40E0D0;
+    padding: 20px 0;
+    margin: 0;
+    font-size: 2.8em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ecf0f1;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilos para los botones */
+.btnCarta{
+    text-align: center;
+}
+
+.btnCarta a{
+    background-color: #40E0D0;
+    color: #fff;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.btnCarta button {
+    background-color: #40E0D0;
+    color: #fff;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btnCarta #btnVerificarBingo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.btnCarta button:hover {
+    background-color: #ecf0f1;
+    transform: translateY(-3px);
+}
+
+/* Estilos para la tabla de Bingo */
+.bingo-table table {
+    width: 70%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bingo-table th,
+.bingo-table td {
+    border: 1px solid #e7e9ec;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: #ffffff;
+}
+
+.bingo-table th {
+    color: #ffffff;
+    background-color: #40E0D0;
+}
+
+.bingo-table td:hover {
+    background-color: #ecf0f1;
+}
+
+.bingo-table td.active {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+/* Estilos adicionales */
+#numerosMarcados {
+    background-color: #ffffff;
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    margin: 10px;
+}
+
+#contadorNumerosMarcados {
+    color: #7f8c8d;
+    font-size: 1.2em;
+    margin: 10px;
+}
+

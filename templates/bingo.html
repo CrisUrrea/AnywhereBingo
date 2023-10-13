@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='Image/LogoBingo.png')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styleBingo.css')}}">
+    <title>Tabla</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Bingo</h1>
+    <div class="btnCarta">
+        <br>
+        <a href="{{ url_for('index') }}">Volver</a>
+        <form method="POST" action="/verificar_bingo">
+            <br>
+            <button type="submit" id="btnVerificarBingo">Bingo</button>
+            <input type="hidden" name="numeros_marcados" id="numerosMarcados">
+        </form>
+        <p id="contadorNumerosMarcados">0 de 25 números marcados</p>
+        <button id="btnNewCard">Nueva Carta</button>
+    </div>
+    <div class="bingo-table">
+        <table>
+            <tr>
+                <th>B</th>
+                <th>I</th>
+                <th>N</th>
+                <th>G</th>
+                <th>O</th>
+            </tr>
+            {% for row in bingo_table %}
+            <tr>
+                {% for number in row %}
+                <td id="cell-{{ number }}" onclick="marcarNumero(this)">{{ number }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/bingo.js') }}"></script>
+</body>
+
+</html>
